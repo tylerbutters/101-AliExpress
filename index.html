@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="en-NZ" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-main">
+                <div class="header-main-items">
+                    <div class="header-main-items-logo">
+                        <a href="./index.html">
+                            <img alt="aliexpress logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <div class="header-main-items-searchbar">
+                        <div class="searchbar-category">
+                            <img alt="searchbar-category-icon" src="img/category.png">
+                        </div>
+                        <input class="searchbar-input" type="text" placeholder="Search">
+                        <a href="./browsing.html">
+                            <div class="searchbar-red">
+                                <img alt="searchbar-red-icon" src="img/search.png">
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div class="header-main-items-options">
+                        <figure> 
+                            <img alt="wishlist icon" src="img/wishlist.png">
+                            <p>WISHLIST</p>
+                        </figure>
+                        <figure onclick="toggleCart()">
+                            <img alt="cart icon" src="img/cart.png">
+                            <p>CART</p>
+                            <div class="notification">
+                                <p id="cartCounter">0</p>
+                            </div>
+                        </figure>
+                        <figure onclick="toggleSign()" id="accountbutton">
+                            <img alt="account icon" src="img/account.png">
+                            <p>ACCOUNT</p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="header-nav-list">
+                    <li>DEALS</li>
+                    <li>PLUS</li>
+                    <li>CATEGORIES</li>
+                    <a href="contact.html"><li>HELP</li></a>
+                    <li>SELL</li>
+                    <li>NEW USER ZONE</li>
+                </ul>
+            </div>
+        </header>
+        <div class="page-container">
+            <!-- SIGN UP -->
+            <div class="signuparea" id="signuparea">
+                <div class="signupcontainer" id="signupcontainer">
+                    <h2>Sign Up</h2>
+                    <form>
+                        <input id="usernamesignup" type="text" name="usernamesignup" value="" 
+                        placeholder="Username">
+                        <input id="passwordsignup" type="text" name="passwordsignup" value="" 
+                        placeholder="Password">
+                        
+                        <button id="submitbutton" type="submit" value="submitbutton">CREATE ACCOUNT</button>
+                        
+                    </form>
+                    <p >Already have an account? <a onclick="toggleLogin()">Log in</a></p>
+                    <p class="fineprint">By creating an account, you agree to the <a>AliExpress.com Free Membership Agreement</a> and <a>Privacy Policy</a></p>
+                </div>
+            </div>
+            <!-- LOG IN -->
+            <div class="loginarea" id="loginarea">
+                <div class="logincontainer" id="logincontainer">
+                    <h2>Log In</h2>
+                    <form>
+                        <input id="usernamelogin" type="text" name="usernamelogin" value="" 
+                        placeholder="Username">
+                        <input id="passwordlogin" type="text" name="passwordlogin" value="" 
+                        placeholder="Password">
+                        
+                        <button id="loginbutton" type="submit" value="submitbutton">LOG IN</button>
+                        
+                    </form>
+                    <p >Don't have an account? <a onclick="toggleLogin()">Sign up</a></p>
+                    <p class="fineprint">By creating an account, you agree to the <a>AliExpress.com Free Membership Agreement</a> and <a>Privacy Policy</a></p>
+                </div>
+            </div>
+            <!-- CART -->
+            <div class="cart-container" id="cart-container">
+                <div class="cart-info">
+                    <div class="infoContainer">
+                        <p>Items: <p id="quantity">0</p></p>
+                    </div>
+    
+                    <div class="infoContainer">
+                        <p>Total: $<p id="totalCost">0</p></p>
+                        
+                    </div>
+                </div>
+                <div id="cart-items" class="cart-items">
+
+                    <!-- <div class="cart-product">
+                        <div class="cart-product-preview">
+                            <img alt="cart-product-image" src="${productList[i].img}">
+                        </div>
+                        <div class="cart-product-info">
+                            <p class="cart-product-name">asfagasdgiluasyoiuyagiyioiSFSAGFAFASAGAESGT</p>
+                            <p class="cart-product-seller">Xiaomi Offical Store</p>
+                            <p class="cart-product-price">NZD $256.99</p>
+                        </div>
+                        
+                    </div> -->
+
+
+                </div>
+            </div>
+            <div class="page-contents">
+                <div class="group">
+                    <div class="arrows">
+                        <div class="arrow-box">
+                            <img alt="arrow-left" src="img/arrow-left.png">
+                        </div>
+                        <div class="arrow-box">
+                            <img alt="arrow-right" src="img/arrow-right.png">
+                        </div>
+                    </div>
+                    <h1>DEALS</h1>
+                    <div class="post">
+                        <div class="post-preview">
+                            <div class="big-image">
+                                <img alt="post-image" src="img/watc.PNG">
+                            </div>
+                            <div class="small-image-row">
+                                <img alt="post-image" src="img/watch2.PNG">
+                                <img alt="post-image" src="img/watch3.PNG">
+                                <img alt="post-image" src="img/watch4.PNG">
+                                <img alt="post-image" src="img/watch5.PNG">
+                            </div>
+                            
+                        </div>
+                        <div class="post-info">
+                            <p class="product-name">Global Version Xiaomi Redmi Note 11 Smartphone Snapdragon 680 Octa...</p>
+                            <p class="product-seller">Super Offical Store</p>
+                            <div class="post-reviews">
+                                <img alt="rating image" src="img/rating.png">
+                                <p class="product-reviews">32,036 reviews</p>
+                            </div>
+                            <p class="product-discount">NZD $3999.99</p>
+                            <div class="product-price">
+                                <p>NZD $3502</p>
+                                <p class="cents">.29</p>
+                            </div>
+                            <div class="post-options">
+                                <div class="buy">
+                                    <p>BUY NOW</p>
+                                </div>
+                                <div class="add">
+                                    <p>ADD TO CART</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <h2>More Deals</h2>
+                    <div class="arrows">
+                        <div class="arrow-box">
+                            <img alt="arrow-img" src="img/arrow-left.png">
+                        </div>
+                        <div class="arrow-box">
+                            <img alt="arrow-img" src="img/arrow-right.png">
+                        </div>
+                    </div>
+                    <div id="row1" class="row">
+                    </div>
+                    <div class="view-more">
+                        <p>View More</p>
+                    </div>
+                </div>
+                <div class="group">
+                    <h3>PLUS</h3>
+                    <div class="arrows">
+                        <div class="arrow-box">
+                            <img alt="arrow-img" src="img/arrow-left.png">
+                        </div>
+                        <div class="arrow-box">
+                            <img alt="arrow-img" src="img/arrow-right.png">
+                        </div>
+                    </div>
+                    <div id="row2" class="row">
+                    </div>
+                    <div class="view-more">
+                        <p>View More</p>
+                    </div>
+                </div>
+                <div class="group">
+                    <h2>Categories</h2>
+                    <div class="category-group">
+                        <div class="category-item">
+                            <p>Tech</p>
+                            <img alt="image" src="img/tech.png">
+                        </div>
+                        <div class="category-item">
+                            <p>Fashion</p>
+                            <img alt="image" src="img/fashion.png">
+                        </div>
+                        <div class="category-item">
+                            <p>Sports</p>
+                            <img alt="image" src="img/sports.png">
+                        </div>
+                        <div class="category-item">
+                            <p>Kids</p>
+                            <img alt="image" src="img/kids.png">
+                        </div>
+                        <div class="category-item">
+                            <p>Home</p>
+                            <img alt="image" src="img/home.png">
+                        </div>
+                        <div class="category-item">
+                            <p>Vehicles</p>
+                            <img alt="image" src="img/vehicles.png">
+                        </div>
+                    </div>
+                    <div class="view-more">
+                        <p>View All</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <footer>
+            <div class="footer-main">
+                <div class="about-row">
+                    <div class="about-item">
+                        <p class="about-title">Great Value</p>
+                        <p class="about-desc">We offer competitive prices on over 100 million items.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Worldwide Shopping</p>
+                        <p class="about-desc">We ship to over 200 countries and regions, and our site comes in 12 languages.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Safe Payment</p>
+                        <p class="about-desc">Pay with the world’s most popular and secure payment methods.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Shop with Confidence</p>
+                        <p class="about-desc">Our Buyer Protection policy covers your entire purchase journey.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Help Center</p>
+                        <p class="about-desc">Round-the-clock assistance for a smooth shopping experience.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Shop Better</p>
+                        <p class="about-desc">Download the app for mobile-only features such as image search and discount games.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Intellectual Property Protection - 
+                    Privacy Policy - Sitemap - 
+                    Terms of Use - Information for EU consumers - 
+                    Transaction Services Agreement for non-EU/UK Consumers - 
+                    Terms and Conditions for EU/EEA/UK Consumers (Transactions) - 
+                    User Information Legal Enquiry Guide ©️2010-2022 AliExpress.com. 
+                    All rights reserved.  增值电信业务经营许可证 浙B2-20120091-8  
+                    浙公网安备 33010802002248号
+                </p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+        <script src="js/index.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

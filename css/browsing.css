@@ -1,0 +1,207 @@
+.product-list{
+    width:1060px;
+    display:flex;
+    align-items:center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.product{
+    margin-bottom:20px;
+}
+.page-contents{
+    justify-content: space-between;
+    align-items:flex-start;
+    display:flex;
+    flex-direction:row;
+    width:1450px;
+}
+.filter{
+    
+    background-color:white;
+    width:300px;
+    height:1020px;
+    border-radius:10px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    margin:20px;
+    margin-top:100px;
+    padding:30px;
+}
+.top-list{
+    height:100px;
+    font-weight:bold;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h6{
+    font-weight:bold;
+    font-size:20px;
+    margin-bottom:10px;
+}
+.filter-category{
+    
+    display:flex;
+    flex-direction: column;
+    
+}
+.filter-category img:hover{
+    cursor: pointer;
+}
+.filter-category p{
+    margin-bottom:10px;
+}
+.filter-category p:hover{
+    cursor: pointer;
+}
+.filter-category img{
+    width:150px;
+}
+.minmaxarea{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.minmaxarea p{
+    color:black;
+}
+.min-max{
+    width:70px;
+    border:none;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    text-align: center;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.minmaxarea button{
+    width:50px;
+    border:none;
+    background-color: #E52E20;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.minmaxarea button:hover{
+    background-color: #cf2619;
+}
+.container {
+    margin-bottom:10px;
+    display:block;
+    position: relative;
+    padding-left: 35px;
+    width:150px;
+}
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+}
+.container:hover input~ .checkmark{
+    background-color: #E52E20;
+    cursor: pointer;
+}
+.container input:checked ~ .checkmark {
+    background-color: #E52E20;
+  }
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: #eee;
+    transition: 0.2s;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.color-container:hover{
+    cursor:pointer;
+}
+.color-red{
+    display:flex;
+    background-color:red;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+  .color-blue{
+    display:flex;
+    background-color:blue;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+.color-green{
+    display:flex;
+    background-color:green;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+.color-yellow{
+    display:flex;
+    background-color:yellow;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+.color-orange{
+    display:flex;
+    background-color:orange;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+.color-purple{
+    display:flex;
+    background-color:purple;
+    height:30px;
+    width:30px;
+    border-radius:100px;
+}
+
+  .colors{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .link{
+      color:#37AFCA;
+  }
+  .view-more {
+    margin:40px;
+    margin-left:300px;
+  }

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-NZ" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/browsing.css" />
+        <title>Home</title>
+    </head>
+    <body>
+        <header>
+            <div class="header-main">
+                <div class="header-main-items">
+                    <div class="header-main-items-logo">
+                        <a href="./index.html">
+                            <img alt="aliexpress logo" src="img/logo.png">
+                        </a>
+                    </div>
+                    <div class="header-main-items-searchbar">
+                        <div class="searchbar-category">
+                            <img alt="searchbar-category-icon" src="img/category.png">
+                        </div>
+                        <input class="searchbar-input" type="text" placeholder="Search">
+                        <a href="./browsing.html">
+                            <div class="searchbar-red">
+                                <img alt="searchbar-red-icon" src="img/search.png">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="header-main-items-options">
+                        <figure> 
+                            <img alt="wishlist icon" src="img/wishlist.png">
+                            <p>WISHLIST</p>
+                        </figure>
+                        <figure onclick="toggleCart()">
+                            <img alt="cart icon" src="img/cart.png">
+                            <p>CART</p>
+                            <div class="notification">
+                                <p id="cartCounter">0</p>
+                            </div>
+                        </figure>
+                        <figure onclick="toggleSign()" id="accountbutton">
+                            <img alt="account icon" src="img/account.png">
+                            <p>ACCOUNT</p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="header-nav-list">
+                    <li>DEALS</li>
+                    <li>PLUS</li>
+                    <li>CATEGORIES</li>
+                    <a href="contact.html"><li>HELP</li></a>
+                    <li>SELL</li>
+                    <li>NEW USER ZONE</li>
+                </ul>
+            </div>
+        </header>
+        <div class="page-container">
+            <div class="signuparea" id="signuparea">
+                <div class="signupcontainer" id="signupcontainer">
+                    <h2>Sign Up</h2>
+                    <form>
+                        <input id="usernamesignup" type="text" name="usernamesignup" value="" 
+                        placeholder="Username">
+                        <input id="passwordsignup" type="text" name="passwordsignup" value="" 
+                        placeholder="Password">
+                        
+                        <button id="submitbutton" type="submit" value="submitbutton">CREATE ACCOUNT</button>
+                        
+                    </form>
+                    <p >Already have an account? <a>Log in</a></p>
+                    <p class="fineprint">By creating an account, you agree to the <a>AliExpress.com Free Membership Agreement</a> and <a>Privacy Policy</a></p>
+                </div>
+            </div>
+            <div class="cart-container" id="cart-container">
+                <div class="cart-info">
+                    <div class="infoContainer">
+                        <p>Items: &nbsp;<p id="quantity">0</p></p>
+                    </div>
+    
+                    <div class="infoContainer">
+                        <p>Total: $<p id="totalCost">0</p></p>
+                        
+                    </div>
+                </div>
+                <div id="cart-items" class="cart-items">
+
+                    <!-- <div class="cart-product">
+                        <div class="cart-product-preview">
+                            <img alt="cart-product-image" src="${productList[i].img}">
+                        </div>
+                        <div class="cart-product-info">
+                            <p class="cart-product-name">asfagasdgiluasyoiuyagiyioiSFSAGFAFASAGAESGT</p>
+                            <p class="cart-product-seller">Xiaomi Offical Store</p>
+                            <p class="cart-product-price">NZD $256.99</p>
+                        </div>
+                        
+                    </div> -->
+
+
+                </div>
+            </div>
+            <div class="page-contents">
+                <div class="filter">
+                    <div class="filter-category">
+                        <h6>Categories</h6>
+                        <p>Clothes ></p>
+                        <p>Tech ></p>
+                        <p>Family ></p>
+                        <p>Sports ></p>
+                        <p class="link">View more</p>
+                    </div>
+                    <div class="filter-category">
+                        <h6>Rating</h6>
+                        <img src="img/rating.png">
+                    </div>
+                    <div class="filter-category">
+                        <h6>Price</h6>
+                        <p>Under $25</p>
+                        <p>$25 - $50</p>
+                        <p>$50 - $100</p>
+                        <p>$100 - $200</p>
+                        <p>Above $200</p>
+                        <div class="minmaxarea">
+                            <input class="min-max" type="text" placeholder="Min">
+                            <p>-</p>
+                            <input class="min-max" type="text" placeholder="Max">
+                            <button type="submit">GO</button>
+                        </div>
+                           
+                        
+                    </div>
+                    <div class="filter-category">
+                        <h6>Color</h6>
+                        <div class="colors">
+                            <div class="color-container">
+                                <div class="color-red"></div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-blue"></div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-green"></div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-yellow"></div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-orange"></div>
+                            </div>
+                            <div class="color-container">
+                                <div class="color-purple"></div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="filter-category">
+                        <h6>Size</h6>
+                        
+                        <label class="container">Under 17 US
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">18 US
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">19 US
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">20 US
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                        
+                        <label class="container">21 US
+                            <input type="checkbox" >   
+                            <span class="checkmark"></span> 
+                        </label>
+                        
+                        <label class="container">Over 21 US
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="filter-category">
+                        <h6>Condition</h6>
+                        <label class="container">New
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">Used
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="product-group">
+                    <div class="top-list">
+                        <p>All Categories > "stuff"</p>
+                        <!-- <p>Sort by: </p> -->
+                        <!-- <div class="sort-list"></div> -->
+                    </div>
+                    <div id="productlist" class="product-list">
+                    </div>
+                    
+                    <div class="view-more"><p>View More</p></div> 
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-main">
+                <div class="about-row">
+                    <div class="about-item">
+                        <p class="about-title">Great Value</p>
+                        <p class="about-desc">We offer competitive prices on over 100 million items.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Worldwide Shopping</p>
+                        <p class="about-desc">We ship to over 200 countries and regions, and our site comes in 12 languages.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Safe Payment</p>
+                        <p class="about-desc">Pay with the world’s most popular and secure payment methods.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Shop with Confidence</p>
+                        <p class="about-desc">Our Buyer Protection policy covers your entire purchase journey.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Help Center</p>
+                        <p class="about-desc">Round-the-clock assistance for a smooth shopping experience.</p>
+                    </div>
+                    <div class="footer-line"></div>
+                    <div class="about-item">
+                        <p class="about-title">Shop Better</p>
+                        <p class="about-desc">Download the app for mobile-only features such as image search and discount games.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Intellectual Property Protection - 
+                    Privacy Policy - Sitemap - 
+                    Terms of Use - Information for EU consumers - 
+                    Transaction Services Agreement for non-EU/UK Consumers - 
+                    Terms and Conditions for EU/EEA/UK Consumers (Transactions) - 
+                    User Information Legal Enquiry Guide ©️2010-2022 AliExpress.com. 
+                    All rights reserved.  增值电信业务经营许可证 浙B2-20120091-8  
+                    浙公网安备 33010802002248号
+                </p>
+            </div>
+        </footer>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+    <script src="js/browsing.js"></script>
+    <script src="js/main.js"></script>
+</html>
